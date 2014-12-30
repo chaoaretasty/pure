@@ -1,24 +1,31 @@
 Pure
 ====
 
-[![Pure](http://f.cl.ly/items/2y0M0E2Q3a2H0z1N1Y19/pure-banner.png)][Pure]
+[![Pure](https://cloud.githubusercontent.com/assets/449779/5291099/1b554cca-7b03-11e4-9157-53a12d91b34a.png)][Pure]
 
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](https://travis-ci.org/yui/pure.png?branch=master)][Build Status]
+[![Build Status](https://travis-ci.org/yahoo/pure.png?branch=master)][Build Status]
 
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 ```
 
-Alternatively, you can [customize how you use Pure][customize].
+Note: You can [customize which Pure modules you need][customize].
+
+**Install with Bower:**
+
+```shell
+$ bower install --save pure
+```
 
 
 [Pure]: http://purecss.io/
-[Build Status]: https://travis-ci.org/yui/pure
+[Bower]: http://bower.io/
+[Build Status]: https://travis-ci.org/yahoo/pure
 [customize]: http://purecss.io/customize/
 
 
@@ -48,7 +55,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.3KB minified + gzip**.
+* Extremely small file size: **4.5KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -65,7 +72,13 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+```
+
+You can also install Pure using [Bower][], using the following command:
+
+```shell
+$ bower install --save pure
 ```
 
 
@@ -76,7 +89,7 @@ Optionally, you can build Pure from its source on Github. To do this, you'll
 need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
-$ git clone git@github.com:yui/pure.git
+$ git clone git@github.com:yahoo/pure.git
 $ cd pure
 $ npm install
 $ grunt
@@ -100,11 +113,23 @@ conventions of the files in the `build/` directory follow these rules:
 
 * `*-min.css`: A minified file version of the files of the same name.
 
-* `pure-min.css`: A rollup of all `[module]-min.css` files in the `build/` dir.
-  This is a responsive roll-up of everything.
+* `pure.css`: A rollup of all `[module].css` files in the `build/` dir. This is
+  a responsive roll-up of everything, non-minified.
 
-* `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
-  non-responsive roll-up of everything.
+* `pure-min.css`: Minified version of `pure.css` that should be used in
+  production.
+
+* `pure-nr.css`: A Rollup of all modules without @media queries. This is a
+  non-responsive roll-up of everything, non-minified.
+
+* `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
+  production.
+
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+  includes @media queries.
+
+* `grids-responsive-min.css`: Minified version of `grids-responsive.css` that
+  should be used in production.
 
 
 [Grunt]: http://gruntjs.com/
@@ -117,7 +142,7 @@ Pure is tested and works in:
 
 * IE 7+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6.x
+* iOS 6.x, 7.x
 * Android 4.x
 
 
@@ -129,7 +154,7 @@ requests for the docs and website over at the [`pure-site`][pure-site]
 repository.
 
 
-[pure-site]: https://github.com/yui/pure-site
+[pure-site]: https://github.com/yahoo/pure-site
 
 
 Contributing
@@ -138,7 +163,7 @@ Contributing
 See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 
 
-[CONTRIBUTING file]: https://github.com/yui/pure/blob/master/CONTRIBUTING.md
+[CONTRIBUTING file]: https://github.com/yahoo/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -148,4 +173,4 @@ This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
 
 
-[LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md
+[LICENSE file]: https://github.com/yahoo/pure/blob/master/LICENSE.md
